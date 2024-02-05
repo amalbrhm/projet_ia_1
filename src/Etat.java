@@ -3,25 +3,17 @@ import java.util.List;
 
 public class Etat {
         private String name;
-        private int contenu;
+        private List<Integer> contenus;
         private int heuristic;
 
-        public Etat(String name,int contenu, int heuristic) {
+        public Etat(String name,List<Integer> contenu, int heuristic) {
             this.name = name;
-            this.contenu = contenu;
+            this.contenus = contenu;
             this.heuristic = heuristic;
         }
 
         public String getName() {
             return name;
-        }
-
-        public int getContenu() {
-            return contenu;
-        }
-
-        public void setContenu(int contenu) {
-            this.contenu = contenu;
         }
 
         public int getHeuristic() {
@@ -36,10 +28,17 @@ public class Etat {
             this.heuristic = heuristic;
         }
 
-        public boolean estBut() {
+    public List<Integer> getContenus() {
+        return contenus;
+    }
+
+    public void setContenus(List<Integer> contenu) {
+        this.contenus = contenu;
+    }
+
+    public boolean estBut() {
             return false;
         }
-
         public List<Etat> getVoisins() {
             return new ArrayList<>();
         }
