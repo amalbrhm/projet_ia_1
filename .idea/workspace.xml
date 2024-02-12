@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0112f1b3-f452-4b92-9be8-3df6487c7687" name="Changes" comment="mise à jour 2 &#10;// ignorer classe ouvertPile et ouvert">
+    <list default="true" id="0112f1b3-f452-4b92-9be8-3df6487c7687" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Etat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Etat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RechercheEnProfondeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RechercheEnProfondeur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707750452116</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1707750577180</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707750577180</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +106,7 @@
     <MESSAGE value="ajout classe etat" />
     <MESSAGE value="mise à jour 1" />
     <MESSAGE value="mise à jour 2 &#10;// ignorer classe ouvertPile et ouvert" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise à jour 2 &#10;// ignorer classe ouvertPile et ouvert" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

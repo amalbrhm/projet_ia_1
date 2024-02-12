@@ -42,4 +42,5 @@ public class Etat {
         public List<Etat> getVoisins() {
             return new ArrayList<>();
         }
+
 }

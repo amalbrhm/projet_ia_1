@@ -3,7 +3,12 @@ import java.util.*;
 public class RechercheEnProfondeur {
     List<Etat> ferme = new ArrayList<>();
     Stack<Etat> ouvert = new Stack<>() ;
-
+    Etat etatFinal;
+    List<Integer> quantitesMax ;
+    public RechercheEnProfondeur(){
+        etatFinal = new Etat("final",new ArrayList<>(Arrays.asList(0,0,0,10)),0);
+        quantitesMax = new ArrayList<>(Arrays.asList(2,3,5,10));
+    }
     public void heuristic() {
         Etat etat;
         //Initialisation de ferme
@@ -23,14 +28,23 @@ public class RechercheEnProfondeur {
             }
         }
     }
+    public Boolean estBut(Etat etat){
+        return etat.getContenus() == etatFinal;
+    }
+    public void remplirT(Etat etat,int i){
+        etat.getContenus().set(i,quantitesMax.get(i));
+    }
+    public void viderT(Etat etat,int i){
+        etat.getContenus().set(i,0);
+    }
+    public void transvaserD(Etat etat,int g,int d){
+        etat.getContenus().set(g,(quantitesMax.get(d)-etat.getContenus().get(d)));
+        etat.getContenus().set(d,(quantitesMax.get(d)-etat.getContenus().get(d)));
+    }
+    public void transvaserG(Etat etat,int g,int d){
+        etat.getContenus().set(g,(quantitesMax.get(g)-etat.getContenus().get(g)));
+        etat.getContenus().set(d,(quantitesMax.get(g)-etat.getContenus().get(g)));
+    }
 
-
-
-
-    public Boolean estBut(Etat etat){ return true; }
-    // Fonction pour récupérer le meilleur état dans l'ensemble Ouvert
-    /*public static State meilleur(PriorityQueue<State> ouvert) {
-        return ouvert.peek();
-        }*/
 
 }
