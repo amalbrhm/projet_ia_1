@@ -25,11 +25,8 @@ public class RechercheEnProfondeur {
     }
 
 
-    // Fonction pour calculer l'heuristique d'un état
-    public static int heuristic(String etat) {
-        // Implémentez votre fonction heuristique ici
-        return 0; // Pour l'exemple, retourne simplement 0
-        }
+
+
     public Boolean estBut(Etat etat){ return true; }
     // Fonction pour récupérer le meilleur état dans l'ensemble Ouvert
     /*public static State meilleur(PriorityQueue<State> ouvert) {
