@@ -2,15 +2,16 @@ import java.util.List;
 import java.util.Stack;
 
 public class OuvertPile implements Ouvert{
-    private List ouvert;
+    private List<Integer> ouvert;
     @Override
     public void structure() {
-        ouvert = new Stack<List>();
+        ouvert = new Stack<>();
     }
 
+
     @Override
-    public void ajout(List liste) {
-        ouvert.add(liste);
+    public void ajout(List<Integer> liste) {
+        ouvert.push(liste);
     }
 
     @Override
@@ -19,12 +20,17 @@ public class OuvertPile implements Ouvert{
     }
 
     @Override
-    public List teteOuvert() {
+    public List<Integer> teteOuvert() {
+        if (!ouvert.isEmpty()){
+            return ouvert.peek();
+        }
         return null;
     }
 
-    @Override
-    public List<Integer> supprimerEtat(Ouvert ouvert) {
-        return this.ouvert.remove();
+
+
+    public List<Integer> supprimerEtat(List<Integer> contenu) {
+        ouvert.remove(contenu);
+        return contenu;
     }
 }
