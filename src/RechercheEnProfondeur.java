@@ -1,12 +1,14 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class RechercheEnProfondeur {
     List<Etat> ferme = new ArrayList<>();
     Stack<Etat> ouvert = new Stack<>() ;
+    private List<Integer> volumeFinal;
 
     public void heuristic() {
         Etat etat;
@@ -29,6 +31,17 @@ public class RechercheEnProfondeur {
         }
 
     }
+    public Etat etatInitial(int nbrSeaux,List<Integer> contenanceMax, List<Integer> volumes){
+        if(nbrSeaux==contenanceMax.size() && nbrSeaux==volumes.size()){
+            int []volumeInitial = new int[nbrSeaux];
+            for (int i=0; i< nbrSeaux;i++){
+                volumeInitial[i]= volumes.get(i);
+            }
+            return new Etat("initial",Arrays.stream(volumeInitial).boxed().collect(Collectors.toList()),0);
+        }else{
+            throw new IllegalArgumentException("error");
+        }
+    }
     public RechercheEnProfondeur(String cheminFichier){
 
         try{
@@ -43,11 +56,16 @@ public class RechercheEnProfondeur {
 
 
             // le volume d'eau dans le seau à létat final
-            List<Integer> volumes =  Arrays.stream(lecteure.readLine().split("\\s+"))
+            volumeFinal =  Arrays.stream(lecteure.readLine().split("\\s+"))
                     .map(Integer::parseInt)
                     .collect(Collectors.toList());
 
+            Etat etatInitial= etatInitial(nbrSeaux,contenancesMax,volumeFinal);
+
+
             System.out.println(nbrSeaux);
+            System.out.println(contenancesMax);
+            System.out.println(volumeFinal);
 
         }catch(IOException e){
             e.printStackTrace();
@@ -57,7 +75,9 @@ public class RechercheEnProfondeur {
     }
 
     public Boolean estBut(Etat etat){
-        return true;
+        List<Integer> contenanceActuel= etat.getContenus();
+        return contenanceActuel.equals(volumeFinal);
     }
+
 
 }

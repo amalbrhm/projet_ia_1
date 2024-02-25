@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0112f1b3-f452-4b92-9be8-3df6487c7687" name="Changes" comment="mise à jour 2 &#10;// ignorer classe ouvertPile et ouvert">
+    <list default="true" id="0112f1b3-f452-4b92-9be8-3df6487c7687" name="Changes" comment="lecture de fichier&#10;ajout methodes remplissage vidage et transvaser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ouvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ouvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OuvertPile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OuvertPile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RechercheEnProfondeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RechercheEnProfondeur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,24 +56,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AMAL\Desktop\PROJET IA 1\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="PROJET IA 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RechercheEnProfondeur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RechercheEnProfondeur" />
       <module name="PROJET IA 1" />
@@ -85,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.RechercheEnProfondeur" />
       </list>
     </recent_temporary>
@@ -99,6 +105,7 @@
       <updated>1707143871755</updated>
       <workItem from="1708085187429" duration="46000" />
       <workItem from="1708351775352" duration="3011000" />
+      <workItem from="1708878329618" duration="1062000" />
     </task>
     <task id="LOCAL-00001" summary="ajout classe etat">
       <created>1707144684150</created>
